@@ -29,7 +29,7 @@ A leitura de obras nacionais é de fundamental importância para a construção 
 
 <img src="https://github.com/user-attachments/assets/8f6f3708-bfd5-4828-90cf-8a746982ecdf">
 
-O Entrelinhas, sebo online, vem como uma solução à democratizar o acesso à leitura, oferecendo livros usados e novos a preços acessíveis, facilitando a compra pela internet. 
+O Entrelinhas é uma plataforma online voltada para a venda de livros, com a proposta de democratizar o acesso à leitura. A ideia central é tornar os livros mais acessíveis, tanto financeiramente quanto em termos de conveniência, ao disponibilizá-los em um ambiente virtual. Isso é especialmente relevante no contexto atual, onde o consumo de produtos e serviços pela internet se tornou uma prática comum. 
 
 ## Documentação 
 
@@ -37,7 +37,7 @@ Para mais detalhes sobre a construção do projeto, consulte a [documentação c
 
 ## Créditos
 
-Imagens e documentação por Eduarda e Rafaele.
+Imagens e documentação por Eduarda e Rafaele. 👧🏻👧🏻
 
 
 
