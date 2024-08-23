@@ -5,5 +5,5 @@
 </p>
 
 <p align="center">
-  <a href="">Trello</a>
+  <a href="https://trello.com/invite/b/66acd187c9556e20b6437bc6/ATTI8510db676bd9e2c95ecd52aa548223fa2BC8771F/entrelinhas-redev">Trello</a>
 </p>
