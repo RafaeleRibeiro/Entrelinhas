@@ -17,7 +17,7 @@ O Entrelinhas é uma loja virtual dedicada à venda de livros usados e novos nac
 
 O projeto foi criado para entrega de projeto conclusão de curso, proposto durante o 4º semestre do curso técnico de Desenvolvimento de Sistemas Sesi-Senai.
 
-## Imagem logo senai
+<img src="https://logodownload.org/wp-content/uploads/2019/08/senai-logo.png">
 
 Em primeira óptica foram criados os protótipos do site de compras, site institucional e sistema de gerenciamento através da plataforma Figma, posteriormente foi desenvolvido em REACT.
 
