@@ -15,7 +15,7 @@ const Header = () => {
         <a className="btn btn-danger btn-lg" href="#">
           Sobre nós
         </a>
-        <a className="btn btn-danger btn-lg" href="#">
+        <a className="btn btn-danger btn-lg" href="#NossosServicos">
           Nossos Serviços
         </a>
         <a className="btn btn-danger btn-lg" href="#">

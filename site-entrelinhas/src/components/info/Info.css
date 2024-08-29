@@ -1,3 +1,5 @@
-.info h3{
-    color: #851111;
+.container .text-danger{
+    color: #851111d6 !important;
+    font-weight: bold;
 }
+
