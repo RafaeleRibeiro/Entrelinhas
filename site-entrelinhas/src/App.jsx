@@ -15,6 +15,7 @@ function App() {
         </a>
       </div>
       <h1>Entrelinhas</h1>
+      <h2>Duda Triste</h2>
     </>
   );
 }
