@@ -10,13 +10,11 @@ function App() {
   return (
     <>
       <div>
-        <a href="#" target="_blank">
+        <a href="https://google.com" target="_blank">
           <img src={logo} className="logo" alt="Vite logo" />
         </a>
       </div>
       <h1>Entrelinhas</h1>
-      <h2>Duda Feliz</h2>
-      <h2>Rafa Dark</h2>
     </>
   );
 }
