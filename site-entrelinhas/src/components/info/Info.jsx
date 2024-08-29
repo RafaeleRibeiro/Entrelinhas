@@ -6,7 +6,7 @@ const Info = () => {
     <>
       <div className="container">
         <div>
-          <h3 className=" text-danger pt-5">QUEM É A REDev?</h3>
+          <h3 id="SobreNos" className=" text-danger pt-5">QUEM É A REDev?</h3>
           <p>
             Na REDev, somos apaixonados por criar experiências digitais que
             transformam a maneira como as pessoas compram e vendem online.

@@ -7,12 +7,12 @@ const Header = () => {
     <>
       <div className="text-center d-flex header justify-content-center">
         <img src={logo} alt="" />
-        <h1 className="">REDEV DESENVOLVIMENTOS</h1>
+        <h1 className=""> <b>REDEV DESENVOLVIMENTOS </b></h1>
         {/* <ion-icon name="call-outline"></ion-icon>
         <ion-icon name="mail-outline"></ion-icon> */}
       </div>
       <div className="bg-secondary d-flex justify-content-around">
-        <a className="btn btn-danger btn-lg" href="#">
+        <a className="btn btn-danger btn-lg" href="#SobreNos">
           Sobre nós
         </a>
         <a className="btn btn-danger btn-lg" href="#NossosServicos">

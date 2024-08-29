@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="d-flex">
       <img src={banner} class="img-fluid" alt="" />
       <div>
-        <h1>REDEV DESENVOLVIMENTOS</h1>
+        <h1><b>REDEV DESENVOLVIMENTOS</b></h1>
         <h4>Quem somos e como podemos ajudá-los.</h4>
       </div>
     </div>
