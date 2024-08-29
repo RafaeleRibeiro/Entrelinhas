@@ -4,8 +4,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Info from "./components/info/Info";
 import Banner from "./components/banner/Banner";
-import Footer from "./components/footer/footer";
-
+import Footer from "./components/footer/Footer";
 function App() {
   const [count, setCount] = useState(0);
 

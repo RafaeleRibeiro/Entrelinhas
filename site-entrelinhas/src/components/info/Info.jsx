@@ -6,7 +6,9 @@ const Info = () => {
     <>
       <div className="container">
         <div>
-          <h3 id="SobreNos" className=" text-danger pt-5">QUEM É A REDev?</h3>
+          <h3 id="SobreNos" className=" text-danger pt-5">
+            QUEM É A REDev?
+          </h3>
           <p>
             Na REDev, somos apaixonados por criar experiências digitais que
             transformam a maneira como as pessoas compram e vendem online.
@@ -28,17 +30,17 @@ const Info = () => {
             planejado para oferecer uma experiência de usuário excepcional.
           </p>
           <p>
-            <b>Design Responsivo:</b>  Com a crescente utilização de dispositivos
+            <b>Design Responsivo:</b> Com a crescente utilização de dispositivos
             móveis, é crucial que seu site ofereça uma experiência perfeita em
             todas as telas. Nossos designs são totalmente responsivos,
             garantindo que seus clientes possam navegar e comprar facilmente,
             independentemente do dispositivo que estejam usando.
           </p>
           <p>
-           <b>Segurança e Suporte Técnico:</b>  A segurança dos dados dos seus clientes
-            é nossa prioridade. Implementamos as melhores práticas de segurança
-            e oferecemos suporte técnico contínuo, garantindo que seu site
-            esteja sempre protegido e funcionando perfeitamente.
+            <b>Segurança e Suporte Técnico:</b> A segurança dos dados dos seus
+            clientes é nossa prioridade. Implementamos as melhores práticas de
+            segurança e oferecemos suporte técnico contínuo, garantindo que seu
+            site esteja sempre protegido e funcionando perfeitamente.
           </p>
         </div>
         <div className="text-center">
