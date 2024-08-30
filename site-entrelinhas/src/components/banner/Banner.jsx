@@ -4,7 +4,7 @@ import banner from "../../assets/banner.png";
 
 const Banner = () => {
   return (
-    <div className="d-flex">
+    <div id="banner" className="d-flex">
       <img src={banner} className="img-fluid" alt="" />
       <div>
         <h1>
