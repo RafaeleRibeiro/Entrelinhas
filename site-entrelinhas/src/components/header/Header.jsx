@@ -5,20 +5,22 @@ import logo from "../../assets/logo.png";
 const Header = () => {
   return (
     <>
-      <div className="text-center d-flex header justify-content-center">
+      <div className="d-flex justify-content-start header gap-3 p-3">
         <img src={logo} alt="" />
-        <h1 className=""> <b>REDEV DESENVOLVIMENTOS </b></h1>
+        <h1 className="">
+          <b>REDEV DESENVOLVIMENTOS</b>
+        </h1>
         {/* <ion-icon name="call-outline"></ion-icon>
         <ion-icon name="mail-outline"></ion-icon> */}
       </div>
       <div className="bg-secondary d-flex justify-content-around">
-        <a className="btn btn-danger btn-lg" href="#SobreNos">
+        <a className="btn btn-danger btn-lg p-3" href="#SobreNos">
           Sobre nós
         </a>
-        <a className="btn btn-danger btn-lg" href="#NossosServicos">
+        <a className="btn btn-danger btn-lg p-3" href="#NossosServicos">
           Nossos Serviços
         </a>
-        <a className="btn btn-danger btn-lg" href="#">
+        <a className="btn btn-danger btn-lg p-3" href="#">
           Entrelinhas
         </a>
       </div>

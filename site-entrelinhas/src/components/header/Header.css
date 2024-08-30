@@ -1,9 +1,16 @@
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .header h1 {
   color: hsl(0, 77%, 29%);
+  font-size: 42pt;
+}
+
+.bg-secondary{
+  background: #D9D9D9 !important;
+}
+
+.bg-secondary .btn-danger{
+  background: #8511115f;
+}
+.bg-secondary .btn{
+  border: none;
+
 }
