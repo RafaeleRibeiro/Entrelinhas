@@ -10,7 +10,7 @@ const Banner = () => {
         <h1>
           <b>REDEV DESENVOLVIMENTOS</b>
         </h1>
-        <h4>Quem somos e como podemos ajudá-los.</h4>
+        <h4><b>Quem somos e como podemos ajudá-los.</b></h4>
       </div>
     </div>
   );

@@ -16,8 +16,7 @@ export const Footer = () => {
         <p></p>
         <h5>REDevdesenvolvimentos@clientes.com </h5>
         <p></p>
-        <h5>16-2887-5301</h5>
-       
+        <h5 className="pb-5">(16) 2887-5301</h5>
       </footer>
     </div>
   );
