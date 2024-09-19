@@ -1,0 +1,16 @@
+.header h1 {
+  color: hsl(0, 77%, 29%);
+  font-size: 42pt;
+}
+
+.bg-secondary{
+  background: var(--barrinha-color) !important;
+}
+
+.bg-secondary .btn-danger{
+  background: #8511115f;
+}
+.bg-secondary .btn{
+  border: none;
+
+}
