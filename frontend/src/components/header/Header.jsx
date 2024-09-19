@@ -9,7 +9,7 @@ const Header = () => {
         <img src={logo} alt="" />
       </div>
 
-      <div className="bg-secondary d-flex justify-content-around">
+      <div className=" d-flex justify-content-around">
 
         <a className="btn btn-lg p-3" href="#">
         <i class="bi bi-person"></i>
