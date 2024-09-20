@@ -1,26 +1,22 @@
 import React from "react";
 import "./Header.css";
-import logo from "../../assets/Logo.png"; 
 
 const Header = () => {
   return (
-    <>
-      <div className="d-flex justify-content-start header gap-3 p-3">
-        <img src={logo} alt="" />
+    <header className="row w-100 flex-nowrap">
+      <div className="col-10 col-md d-flex justify-content-center align-items-center">
+        <h1 className="fonteLogo ms-5 ps-5">Entrelinhas</h1>
       </div>
 
-      <div className=" d-flex justify-content-around">
-
-        <a className="btn btn-lg p-3" href="#">
-        <i class="bi bi-person"></i>
+      <div className=" col-md-1 d-flex">
+        <a className="btn p-1 btn-lg color-redev" href="#">
+          <i className="bi bi-cart-plus fs-3"></i>
         </a>
-
-        <a className="btn btn-lg p-3" href="#">
-          <i class="bi bi-cart-plus"></i>
+        <a className="btn p-1 btn-lg color-redev" href="#">
+          <i className="bi bi-person fs-3"></i>
         </a>
-
       </div>
-    </>
+    </header>
   );
 };
 

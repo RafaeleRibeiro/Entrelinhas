@@ -1,8 +1,7 @@
-/* .footer {
-  background-color: #8511115a;
-  text-align: center;
+footer {
+  background: #4d2b0d;
 }
 
-.footer h5 {
-  margin-bottom: 0;
-} */
+.color-white {
+  color: #fff;
+}

@@ -3,40 +3,41 @@ import "./Footer.css";
 
 export const Footer = () => {
   return (
-    <div className="pt-5">
-      <footer className="footer pt-5">
-        {/* <img src="https://placehold.co/200x200" alt=""></img> */}
+    <footer className="row justify-content-around align-items-end">
+      {/* <img src="https://placehold.co/200x200" alt=""></img> */}
+      <div className="col d-none  d-lg-block">
         <h4>
           <strong>Categories</strong>
         </h4>
-        <p></p>
+        <br />
         <h6>Fiction Books</h6>
         <h6>Childrens Books</h6>
         <h6>National Literature</h6>
         <h6>Non-Fiction Books</h6>
-        <p></p>
+      </div>
+
+      <div className="col text-end color-white">
+        <h5 className="pe-3">Agradecemos sua companhia!</h5>
 
         <div>
-          <h5>Agradecemos sua companhia!</h5>
-
-          <a className="btn btn-lg p-3" href="Facebook">
+          <a className="btn btn-lg p-2" href="Facebook">
             <i class="bi bi-facebook"></i>
           </a>
 
-          <a className="btn btn-lg p-3" href="Twitter">
+          <a className="btn btn-lg p-2" href="Twitter">
             <i class="bi bi-twitter-x"></i>
           </a>
 
-          <a className="btn btn-lg p-3" href="Youtube">
+          <a className="btn btn-lg p-2" href="Youtube">
             <i class="bi bi-youtube"></i>
           </a>
 
-          <a className="btn btn-lg p-3" href="Instagram">
+          <a className="btn btn-lg p-2" href="Instagram">
             <i class="bi bi-instagram"></i>
           </a>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

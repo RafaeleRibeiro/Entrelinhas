@@ -1,0 +1,8 @@
+.fonteLogo {
+  font-family: "Goudy Bookletter 1911", serif;
+  color: var(--logo-font-color);
+}
+
+.color-redev {
+  color: #956439;
+}
