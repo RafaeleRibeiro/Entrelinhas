@@ -21,19 +21,19 @@ export const Footer = () => {
 
         <div>
           <a className="btn btn-lg p-2" href="Facebook">
-            <i class="bi bi-facebook"></i>
+            <i className="bi bi-facebook"></i>
           </a>
 
           <a className="btn btn-lg p-2" href="Twitter">
-            <i class="bi bi-twitter-x"></i>
+            <i className="bi bi-twitter-x"></i>
           </a>
 
           <a className="btn btn-lg p-2" href="Youtube">
-            <i class="bi bi-youtube"></i>
+            <i className="bi bi-youtube"></i>
           </a>
 
           <a className="btn btn-lg p-2" href="Instagram">
-            <i class="bi bi-instagram"></i>
+            <i className="bi bi-instagram"></i>
           </a>
         </div>
       </div>
