@@ -32,11 +32,14 @@ const Login = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://redev.somee.com/api/Usuarios", {
-        nome: formData.nome,
-        email: formData.email,
-        senha: formData.senha,
-      });
+      const response = await axios.post(
+        "https://redev.somee.com/api/Usuarios",
+        {
+          nome: formData.nome,
+          email: formData.email,
+          senha: formData.senha,
+        }
+      );
 
       if (response.status === 201) {
         alert("Registro realizado com sucesso. Faça o login!");
@@ -52,7 +55,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://redev.somee.com/api/Usuarios/login",
+        "https://redev.somee.com/api/Usuarios/login",
         {
           username: loginData.email,
           password: loginData.senha,
