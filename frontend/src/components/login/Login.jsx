@@ -43,6 +43,7 @@ const Login = () => {
 
       if (response.status === 201) {
         alert("Registro realizado com sucesso. Faça o login!");
+        setFormData({ nome: "", email: "", senha: "" });
         setIsRegister(false); // Troca para a tela de login após o registro
       }
     } catch (error) {
@@ -65,8 +66,10 @@ const Login = () => {
       if (response.status === 200) {
         // Armazenar o token JWT no localStorage ou em outro local seguro
         localStorage.setItem("token", response.data.token);
-        alert("Login realizado com sucesso!");
-        navigate("/dashboard"); // Redirecionar para outra página após login
+        const usuarioId = response.data.usuarioId; // ou a propriedade correta
+        localStorage.setItem("usuarioId", usuarioId); // Armazenar o ID do usuário no localStorage
+        alert(usuarioId);
+        navigate("../"); // Redirecionar para outra página após login
       }
     } catch (error) {
       setErrorMessage("Falha no login. Verifique suas credenciais.");

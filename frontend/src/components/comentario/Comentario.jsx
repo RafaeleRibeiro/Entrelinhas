@@ -4,7 +4,7 @@ import axios from "axios";
 const Comentario = ({ googleBooksId }) => {
   const [comentario, setComentario] = useState("");
   const [nota, setNota] = useState(0);
-  const [usuarioId, setUsuarioId] = useState(""); // Defina o usuário autenticado aqui
+  const usuarioId = localStorage.getItem("usuarioId"); // Captura o ID do usuário do localStorage
 
   const handleComentarioChange = (e) => {
     setComentario(e.target.value);
@@ -33,7 +33,7 @@ const Comentario = ({ googleBooksId }) => {
       setNota(0);
     } catch (error) {
       console.error("Erro ao criar comentário:", error);
-      console.log("Id do Usuário:", usuarioId);
+      console.log("Id do Usuario:", usuarioId);
     }
   };
 
