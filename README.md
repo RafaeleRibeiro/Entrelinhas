@@ -6,7 +6,8 @@
 
 <p align="center">
   <a href="https://trello.com/invite/b/66acd187c9556e20b6437bc6/ATTI8510db676bd9e2c95ecd52aa548223fa2BC8771F/entrelinhas-redev">Trello</a> -
-  <a href="https://www.figma.com/design/vYNfG1YU0zkxnjioQSRZ9d/Entrelinhas?node-id=138-3&t=YHWV6X1pYCr0Tr8A-1">Figma</a>
+  <a href="https://www.figma.com/design/vYNfG1YU0zkxnjioQSRZ9d/Entrelinhas?node-id=138-3&t=YHWV6X1pYCr0Tr8A-1">Figma</a> -
+  <a href="http://redev.somee.com/swagger/index.html">Swagger API</a> 
 </p>
 
 ## Sebo Online Entrelinhas
