@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css"; // Importando o CSS personalizado
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -47,7 +46,7 @@ const App = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="text-center">Livros Populares</h1>
+      {/* <h1 className="text-center">Livros Populares</h1> */}
       <div className="row">
         {books.map((book, index) => (
           <div className="col-md-4 mb-4" key={index}>

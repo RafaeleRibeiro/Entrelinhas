@@ -10,15 +10,18 @@ import Banner from "./components/banner/Banner";
 import Categoria from "./components/categorias/Categoria";
 import Books from "./Books";
 import Livros from "./Livros";
+import Login from "./components/login/Login";
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Banner />
       <Categoria />
       <Livros />
-      <Footer />
+      <Footer /> */}
+
+      <Login />
     </>
   );
 }

@@ -5,12 +5,12 @@ import "./Categoria.css";
 
 const Categoria = () => {
   const categorias = [
-    { name: "Categoria01" },
-    { name: "Categoria02" },
-    { name: "Categoria03" },
-    { name: "Categoria04" },
-    { name: "Categoria05" },
-    { name: "Categoria06" },
+    { name: "Ficção" },
+    { name: "Não Ficção" },
+    { name: "Infantil" },
+    { name: "Romance" },
+    { name: "Autoajuda" },
+    { name: "Juvenil" },
   ];
 
   return (
