@@ -11,17 +11,19 @@ import Categoria from "./components/categorias/Categoria";
 import Books from "./Books";
 import Livros from "./Livros";
 import Login from "./components/login/Login";
+import Comentario from "./components/comentario/Comentario";
 
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Banner />
       <Categoria />
       <Livros />
-      <Footer /> */}
+      <Comentario />
+      <Footer />
 
-      <Login />
+      {/* <Login /> */}
     </>
   );
 }
