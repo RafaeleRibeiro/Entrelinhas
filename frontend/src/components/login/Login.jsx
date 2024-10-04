@@ -85,9 +85,9 @@ const Login = () => {
           <h3>Sign In</h3>
           <form onSubmit={handleLogin}>
             <div className="form-group">
-              <label>Email</label>
               <input
                 type="email"
+                placeholder="Email Cadastrado"
                 name="email"
                 value={loginData.email}
                 onChange={handleLoginChange}
@@ -96,9 +96,9 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-              <label>Senha</label>
               <input
                 type="password"
+                placeholder="Digite sua senha"
                 name="senha"
                 value={loginData.senha}
                 onChange={handleLoginChange}
@@ -117,9 +117,9 @@ const Login = () => {
           <h3>Sign Up</h3>
           <form onSubmit={handleRegister}>
             <div className="form-group">
-              <label>Email</label>
               <input
                 type="email"
+                placeholder=" Cadastre o Email"
                 name="email"
                 value={formData.email}
                 onChange={handleRegisterChange}
@@ -128,9 +128,9 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-              <label>Senha</label>
               <input
                 type="password"
+                placeholder="Senha"
                 name="senha"
                 value={formData.senha}
                 onChange={handleRegisterChange}
@@ -139,9 +139,10 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-              <label>Nome Completo</label>
+             
               <input
                 type="text"
+                placeholder="Nome Completo"
                 name="nome"
                 value={formData.nome}
                 onChange={handleRegisterChange}

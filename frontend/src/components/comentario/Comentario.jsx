@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../comentario/Comentario.css";
 import axios from "axios";
 
 const Comentario = ({ googleBooksId }) => {
