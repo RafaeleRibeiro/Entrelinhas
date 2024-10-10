@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import StarRating from "./StarRating"; // Importa o componente de estrelas
 
 const ComentarioModal = ({ googleBooksId }) => {
   const [comentario, setComentario] = useState("");
-  const [nota, setNota] = useState(0);
+  const [nota, setNota] = useState(0); // Inicializa a nota com 0
   const usuarioId = localStorage.getItem("usuarioId"); // Captura o ID do usuário do localStorage
 
   const [showModal, setShowModal] = useState(false);
 
   const handleComentarioChange = (e) => {
     setComentario(e.target.value);
-  };
-
-  const handleNotaChange = (e) => {
-    setNota(Number(e.target.value));
   };
 
   const handleSubmit = async (e) => {
@@ -25,7 +22,7 @@ const ComentarioModal = ({ googleBooksId }) => {
       const response = await axios.post(apiUrl, {
         usuariosId: usuarioId, // ID do usuário autenticado
         googleBooksId: googleBooksId, // ID do livro do Google
-        nota: nota,
+        nota: nota, // Nota do rating por estrelas
         comentario: comentario,
       });
 
@@ -38,13 +35,15 @@ const ComentarioModal = ({ googleBooksId }) => {
     }
   };
 
+  
   return (
-    <div>
+    <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:"center"}}>
       {/* Ícone de + para abrir o modal */}
+      <h4 className="button-title align-content-center">Adicione sua avaliação e comentário!</h4>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary bg-transparent"
         onClick={() => setShowModal(true)}
-        style={{ fontSize: "24px", borderRadius: "50%", padding: "10px" }}
+        style={{ fontSize: "50px", borderRadius: "50%", padding: "10px" }}
       >
         +
       </button>
@@ -65,30 +64,31 @@ const ComentarioModal = ({ googleBooksId }) => {
               <div className="modal-body">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
-                    <label className="form-label">Nota:</label>
-                    <input
-                      type="number"
-                      min="0"
-                      max="5"
-                      value={nota}
-                      onChange={handleNotaChange}
-                      className="form-control"
-                      required
-                    />
+                    <label>Nota:</label>
+                    {/* Componente de estrelas */}
+                    <StarRating nota={nota} setNota={setNota} />
                   </div>
                   <div className="mb-3">
-                    <label className="form-label">Comentário:</label>
+                    <label>Comentário:</label>
                     <textarea
+                      className="form-control"
                       value={comentario}
                       onChange={handleComentarioChange}
-                      className="form-control"
-                      rows="3"
                       required
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary">
-                    Enviar Comentário
-                  </button>
+                  <div className="modal-footer">
+                    <button type="submit" className="btn btn-success">
+                      Enviar Comentário
+                    </button>
+                    {/* <button
+                      type="button"
+                      className="btn btn-secondary"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Fechar
+                    </button> */}
+                  </div>
                 </form>
               </div>
             </div>

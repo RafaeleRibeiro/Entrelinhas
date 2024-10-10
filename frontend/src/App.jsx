@@ -16,11 +16,10 @@ function App() {
   return (
     <>
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/generos" element={<Generos />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/generos" element={<Generos />} />
         <Route path="/generos/:genero" element={<LivrosPorGenero />} />
         <Route path="/login" element={<Login />} /> {/* Rota para login */}
-
         {/* <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>

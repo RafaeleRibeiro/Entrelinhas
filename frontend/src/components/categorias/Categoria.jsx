@@ -9,7 +9,7 @@ const Categoria = () => {
     { name: "Não Ficção" },
     { name: "Infantil" },
     { name: "Romance" },
-    { name: "Autoajuda" },
+    { name: "Auto Ajuda" },
     { name: "Juvenil" },
   ];
 

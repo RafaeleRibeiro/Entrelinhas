@@ -9,7 +9,7 @@ const Generos = () => {
     { name: "Infantil" },
     { name: "Romance" },
     { name: "Autoajuda" },
-    { name: "Juvenil" }
+    { name: "Juvenil" },
   ];
 
   return (

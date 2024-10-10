@@ -27,17 +27,15 @@ body {
   background: var(--bg-color);
 }
 
-
 .btn {
   color: var(--icon-color-white);
 }
 
-#cover{
+#cover {
   height: 300px;
 
-  & img{
+  & img {
     height: 300px;
     width: 200px;
   }
-
 }
