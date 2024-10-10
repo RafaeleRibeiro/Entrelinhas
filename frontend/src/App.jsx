@@ -17,7 +17,7 @@ function App() {
     <>
       <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/" element={<Generos />} />
+      <Route path="/generos" element={<Generos />} />
         <Route path="/generos/:genero" element={<LivrosPorGenero />} />
         <Route path="/login" element={<Login />} /> {/* Rota para login */}
 

@@ -47,13 +47,17 @@ const App = () => {
   return (
     <div className="container mt-4">
       {/* <h1 className="text-center">Livros Populares</h1> */}
-      <div className="row">
+      <div className="row justify-content-center align-items-center">
         {books.map((book, index) => (
-          <div className="col-md-4 mb-3" key={index}>
-            <div className="card">
+          <div
+            id="cover"
+            className="col-md-4 mt-3 mb-5 d-flex justify-content-center"
+            key={index}
+          >
+            <div className="">
               <img
                 src={book.cover}
-                className="card-img-top book-cover"
+                className="card object-fit-cover"
                 alt={`Capa do livro ${book.title}`}
                 style={{ cursor: "pointer" }}
                 onClick={() => handleBookClick(book)}
@@ -88,6 +92,13 @@ const App = () => {
                 <p>
                   <strong>Data de publicação:</strong>{" "}
                   {selectedBook.publishedDate}
+                </p>
+                <p>
+                  <a
+                    href={`https://lista.mercadolivre.com.br/${selectedBook.title}`}
+                  >
+                    COMPRE AQUI
+                  </a>
                 </p>
               </div>
             </div>

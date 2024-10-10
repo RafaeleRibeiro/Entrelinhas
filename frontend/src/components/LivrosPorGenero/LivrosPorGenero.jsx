@@ -6,50 +6,50 @@ const LivrosPorGenero = () => {
   const { genero } = useParams(); // Obtém o gênero da URL
   const [livros, setLivros] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [comentario, setComentario] = useState("");
-  const [livroSelecionado, setLivroSelecionado] = useState(null);
-  const usuarioId = localStorage.getItem('usuarioId'); // Captura o ID do usuário logado
+  const [startIndex, setStartIndex] = useState(0); // Controle para carregar mais livros
+  const [hasMore, setHasMore] = useState(true);
 
-  // Função para buscar livros por gênero
-  const fetchLivrosPorGenero = async () => {
+  // Função para buscar os livros por categoria
+  const fetchLivrosPorGenero = async (startIndex) => {
     try {
       const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${genero}`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${genero}&startIndex=${startIndex}&maxResults=10`
       );
-      setLivros(response.data.items);
+      const novosLivros = response.data.items;
+      setLivros((prevLivros) => [...prevLivros, ...novosLivros]);
       setLoading(false);
+
+      if (novosLivros.length < 10) {
+        setHasMore(false); // Se menos de 10 livros forem retornados, significa que não há mais livros para carregar
+      }
     } catch (error) {
-      console.error("Erro ao buscar livros por gênero:", error);
+      console.error("Erro ao buscar livros:", error);
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchLivrosPorGenero();
-  }, [genero]);
+    fetchLivrosPorGenero(startIndex);
+  }, [startIndex, genero]);
 
-  // Função para enviar o comentário
-  const enviarComentario = async (livroId) => {
-    if (!comentario || !usuarioId) return;
-    
-    const novoComentario = {
-      usuariosId: usuarioId,
-      googleBooksId: livroId,
-      nota: 5, // Exemplo, pode ser dinamicamente ajustado
-      comentario: comentario,
-    };
-
-    try {
-      await axios.post("http://redev.somee.com/api/Avaliacoes", novoComentario);
-      alert("Comentário enviado com sucesso!");
-      setComentario(""); // Limpa o campo de comentário após o envio
-    } catch (error) {
-      console.error("Erro ao enviar o comentário:", error);
-      alert("Erro ao enviar o comentário");
+  // Função que detecta o fim da página e carrega mais livros
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop !==
+        document.documentElement.offsetHeight ||
+      !hasMore
+    ) {
+      return;
     }
+    setStartIndex((prevStartIndex) => prevStartIndex + 10); // Incrementa o startIndex para carregar os próximos livros
   };
 
-  if (loading) return <p>Carregando livros...</p>;
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [hasMore]);
+
+  if (loading && livros.length === 0) return <p>Carregando livros...</p>;
 
   return (
     <div className="container mt-4">
@@ -66,38 +66,14 @@ const LivrosPorGenero = () => {
               <div className="card-body">
                 <h5 className="card-title">{livro.volumeInfo.title}</h5>
                 <p className="card-text">{livro.volumeInfo.description}</p>
-                <div>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => setLivroSelecionado(livro.id)}
-                  >
-                    Comentar
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Selecione um livro para comentar */}
-      {livroSelecionado && (
-        <div className="comentario-section">
-          <h3>Comentar no livro selecionado</h3>
-          <textarea
-            className="form-control"
-            value={comentario}
-            onChange={(e) => setComentario(e.target.value)}
-            placeholder="Escreva seu comentário..."
-          ></textarea>
-          <button
-            className="btn btn-success mt-2"
-            onClick={() => enviarComentario(livroSelecionado)}
-          >
-            Enviar Comentário
-          </button>
-        </div>
-      )}
+      {loading && <p>Carregando mais livros...</p>}
+      {!hasMore && <p>Não há mais livros para carregar.</p>}
     </div>
   );
 };

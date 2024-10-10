@@ -31,3 +31,13 @@ body {
 .btn {
   color: var(--icon-color-white);
 }
+
+#cover{
+  height: 300px;
+
+  & img{
+    height: 300px;
+    width: 200px;
+  }
+
+}

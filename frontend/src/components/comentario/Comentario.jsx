@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import "../comentario/Comentario.css";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const Comentario = ({ googleBooksId }) => {
+const ComentarioModal = ({ googleBooksId }) => {
   const [comentario, setComentario] = useState("");
   const [nota, setNota] = useState(0);
   const usuarioId = localStorage.getItem("usuarioId"); // Captura o ID do usuário do localStorage
+
+  const [showModal, setShowModal] = useState(false);
 
   const handleComentarioChange = (e) => {
     setComentario(e.target.value);
@@ -17,11 +19,10 @@ const Comentario = ({ googleBooksId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const apiUrl = "https://redev.somee.com/api/Avaliacoes"; // API para criar o comentário
+    const apiUrl = "https://redev.somee.com/api/Avaliacoes"; // URL da API para criar o comentário
 
     try {
       const response = await axios.post(apiUrl, {
-        // avaliacaoId: "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Geração de ID para avaliação
         usuariosId: usuarioId, // ID do usuário autenticado
         googleBooksId: googleBooksId, // ID do livro do Google
         nota: nota,
@@ -29,42 +30,73 @@ const Comentario = ({ googleBooksId }) => {
       });
 
       console.log("Comentário criado:", response.data);
-      // Aqui você pode limpar o formulário ou atualizar o estado conforme necessário
       setComentario("");
       setNota(0);
+      setShowModal(false); // Fecha o modal após enviar o comentário
     } catch (error) {
       console.error("Erro ao criar comentário:", error);
-      console.log("Id do Usuario:", usuarioId);
     }
   };
 
   return (
-    <div className="comentario-container">
-      <h3>Adicionar Comentário</h3>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nota:</label>
-          <input
-            type="number"
-            min="0"
-            max="5"
-            value={nota}
-            onChange={handleNotaChange}
-            required
-          />
+    <div>
+      {/* Ícone de + para abrir o modal */}
+      <button
+        className="btn btn-primary"
+        onClick={() => setShowModal(true)}
+        style={{ fontSize: "24px", borderRadius: "50%", padding: "10px" }}
+      >
+        +
+      </button>
+
+      {/* Modal do Bootstrap */}
+      {showModal && (
+        <div className="modal show" style={{ display: "block" }}>
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Adicionar Comentário</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={() => setShowModal(false)}
+                ></button>
+              </div>
+              <div className="modal-body">
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label className="form-label">Nota:</label>
+                    <input
+                      type="number"
+                      min="0"
+                      max="5"
+                      value={nota}
+                      onChange={handleNotaChange}
+                      className="form-control"
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label className="form-label">Comentário:</label>
+                    <textarea
+                      value={comentario}
+                      onChange={handleComentarioChange}
+                      className="form-control"
+                      rows="3"
+                      required
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Enviar Comentário
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <label>Comentário:</label>
-          <textarea
-            value={comentario}
-            onChange={handleComentarioChange}
-            required
-          />
-        </div>
-        <button type="submit">Enviar Comentário</button>
-      </form>
+      )}
     </div>
   );
 };
 
-export default Comentario;
+export default ComentarioModal;
