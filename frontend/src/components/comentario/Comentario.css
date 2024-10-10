@@ -1,0 +1,91 @@
+/* Container principal que centraliza o conteúdo */
+.comentario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto; /* Centralizar na página */
+    color: #fff; /* Cor do texto branca */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título do formulário */
+  h3 {
+    font-size: 24px;
+    font-family: 'Georgia', serif; /* Fonte serifada elegante */
+    margin-bottom: 20px;
+    color: #fff; /* Cor do texto */
+  }
+  
+  /* Estilos para o campo de nota e comentário */
+  .campo-formulario {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #fff;
+    display: block;
+  }
+  
+  /* Campo de nota */
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #2f4f4f;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Campo de comentário */
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #2f4f4f;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Estilo do botão de envio */
+  .botao-enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: #2f4f4f;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .botao-enviar:hover {
+    background-color: #3a5a5a; /* Leve mudança de cor ao passar o mouse */
+  }
+  
+  /* Mensagem de feedback */
+  .mensagem-feedback {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #0f0; /* Verde para mensagens de sucesso */
+    text-align: center;
+  }
+  
+  /* Feedback de erro, caso necessário */
+  .mensagem-feedback.erro {
+    color: #f00; /* Vermelho para mensagens de erro */
+  }
+  
+  

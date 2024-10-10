@@ -14,7 +14,7 @@ const Categoria = () => {
   ];
 
   return (
-    <div className="icons d-flex mt-4 gap-1">
+    <div className="icons d-flex mt-4 gap-5">
       {categorias.map((item, index) => (
         <OverlayTrigger
           key={index}
@@ -27,7 +27,7 @@ const Categoria = () => {
             </Popover>
           }
         >
-          <div id="bookzinho" className="fs-1">
+          <div id="bookzinho" className="fs-3">
             <i className="bi bi-book"></i>
           </div>
         </OverlayTrigger>

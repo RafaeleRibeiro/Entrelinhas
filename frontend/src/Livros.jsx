@@ -49,7 +49,7 @@ const App = () => {
       {/* <h1 className="text-center">Livros Populares</h1> */}
       <div className="row">
         {books.map((book, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+          <div className="col-md-4 mb-3" key={index}>
             <div className="card">
               <img
                 src={book.cover}
