@@ -21,7 +21,7 @@ const ComentarioModal = ({ googleBooksId }) => {
     try {
       const response = await axios.post(apiUrl, {
         usuariosId: usuarioId, // ID do usuário autenticado
-        googleBooksId: googleBooksId, // ID do livro do Google
+        googleBooksId: "00001", // ID do livro do Google
         nota: nota, // Nota do rating por estrelas
         comentario: comentario,
       });
@@ -35,11 +35,19 @@ const ComentarioModal = ({ googleBooksId }) => {
     }
   };
 
-  
   return (
-    <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:"center"}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       {/* Ícone de + para abrir o modal */}
-      <h4 className="button-title align-content-center">Adicione sua avaliação e comentário!</h4>
+      <h4 className="button-title align-content-center">
+        Adicione sua avaliação e comentário!
+      </h4>
       <button
         className="btn btn-primary bg-transparent"
         onClick={() => setShowModal(true)}
@@ -50,9 +58,13 @@ const ComentarioModal = ({ googleBooksId }) => {
 
       {/* Modal do Bootstrap */}
       {showModal && (
-        <div className="modal show" style={{ display: "block" }}>
-          <div className="modal-dialog">
-            <div className="modal-content">
+        <div
+          className="modal show"
+          style={{ display: "block" }}
+          onClick={() => setShowModal(false)}
+        >
+          <div className="modal-dialog color-redev">
+            <div id="comentario" className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">Adicionar Comentário</h5>
                 <button
@@ -63,7 +75,7 @@ const ComentarioModal = ({ googleBooksId }) => {
               </div>
               <div className="modal-body">
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-3">
+                  <div className="mb-3 d-flex gap-3 justify-content-center align-items-center">
                     <label>Nota:</label>
                     {/* Componente de estrelas */}
                     <StarRating nota={nota} setNota={setNota} />
@@ -77,7 +89,7 @@ const ComentarioModal = ({ googleBooksId }) => {
                       required
                     />
                   </div>
-                  <div className="modal-footer">
+                  <div className="modal-footer d-flex justify-content-center">
                     <button type="submit" className="btn btn-success">
                       Enviar Comentário
                     </button>
