@@ -54,6 +54,15 @@ const Login = () => {
   // Função para lidar com o login
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    // Validação de credenciais de admin (feita no frontend)
+    if (loginData.email === "admin@admin.com" && loginData.senha === "admin") {
+      // Se o email e senha forem de admin, redireciona para a página de admin
+      navigate("/admpage");
+      return;
+    }
+
+    // Caso não seja o admin, faz o login via API
     try {
       const response = await axios.post(
         "https://redev.somee.com/api/Usuarios/login",
@@ -139,7 +148,6 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-             
               <input
                 type="text"
                 placeholder="Nome Completo"
@@ -163,3 +171,4 @@ const Login = () => {
 };
 
 export default Login;
+
