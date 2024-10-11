@@ -5,6 +5,7 @@ import Categoria from "../categorias/Categoria";
 import Livros from "../../Livros";
 import Comentario from "../comentario/Comentario";
 import Footer from "../footer/Footer";
+import ClientesList from "../ListaCliente/ClientesList";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Livros />
       <Comentario />
       <Footer />
+    
     </div>
   );
 };
