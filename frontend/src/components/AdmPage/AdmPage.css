@@ -1,0 +1,24 @@
+/* Variáveis CSS para personalizar as cores dos cards */
+:root {
+  --card-bg-color: #395144; /* Cor de fundo padrão (similar ao dark do Bootstrap) */
+  --card-text-color: #ffffff; /* Cor do texto */
+  --card-icon-color: #ffffff; /* Cor dos ícones */
+}
+
+/* Estilo dos cards */
+.card-custom {
+  background-color: var(--card-bg-color); /* Variável para cor do fundo */
+  color: var(--card-text-color); /* Variável para cor do texto */
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-custom .card-icon {
+  font-size: 2.5rem;
+  color: var(--card-icon-color); /* Variável para cor dos ícones */
+}
+
+/* Efeito de hover para os cards */
+.card-custom:hover {
+  background-color: #4d2b0d; /* Cor de hover ao passar o mouse */
+}

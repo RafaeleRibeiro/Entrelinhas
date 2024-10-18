@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <header className="row w-100 flex-nowrap">
+    <header className="row w-100 flex-nowrap m-0">
       <div className="col-10 col-md d-flex justify-content-center align-items-center">
         <h1 className="fonteLogo ms-5 ps-5">Entrelinhas</h1>
       </div>

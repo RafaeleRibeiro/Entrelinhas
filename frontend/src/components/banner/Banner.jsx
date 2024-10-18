@@ -4,7 +4,10 @@ import banner from "../../assets/banner.png";
 
 const Banner = () => {
   return (
-    <div id="banner" className="d-flex">
+    <div
+      id="banner"
+      className="d-flex justify-content-center align-items-center"
+    >
       <img src={banner} className="img-fluid" alt="" />
     </div>
   );

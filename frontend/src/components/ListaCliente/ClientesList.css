@@ -21,6 +21,11 @@
   border-collapse: separate; /* Para permitir o espaçamento entre linhas */
   border-spacing: 0 10px; /* Espaçamento de 10px entre as linhas da tabela */
   margin-top: 20px;
+
+  & button {
+    background-color: #6b7972;
+    border: 0;
+  }
 }
 
 .table th,
@@ -28,6 +33,7 @@
   padding: 15px 10px; /* Aumenta o padding para melhorar o espaçamento interno */
   text-align: center;
   background-color: #6b7972; /* Fundo das células */
+  vertical-align: middle;
 }
 
 .table th {

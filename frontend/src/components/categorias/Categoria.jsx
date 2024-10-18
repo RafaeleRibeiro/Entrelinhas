@@ -14,7 +14,7 @@ const Categoria = () => {
   ];
 
   return (
-    <div className="icons d-flex mt-4 gap-5">
+    <div className="icons d-flex align-items-center justify-content-center mt-4 gap-5">
       {categorias.map((item, index) => (
         <OverlayTrigger
           key={index}
