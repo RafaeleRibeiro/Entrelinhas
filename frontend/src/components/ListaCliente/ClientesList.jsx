@@ -96,7 +96,7 @@ const ClientesList = () => {
       <h1>Lista de Usuários</h1>
 
       {/* Formulário para criar um novo usuário */}
-      <div className="create-user-form">
+      <div style={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
         <input
           type="text"
           placeholder="Nome"
@@ -164,8 +164,10 @@ const ClientesList = () => {
           </>
         ) : (
           <>
-            <button onClick={() => handleEdit(usuario)}>Editar</button>
-            <button onClick={() => handleDelete(usuario.usuarioId)}>Excluir</button>
+         
+            <button onClick={() => handleEdit(usuario)}><i class="bi bi-pencil-square"></i></button>
+            <button onClick={() => handleDelete(usuario.usuarioId)}><i class="bi bi-trash3"></i></button>
+            
           </>
         )}
       </td>

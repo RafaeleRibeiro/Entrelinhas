@@ -11,7 +11,7 @@ import Generos from "./components/Generos/Generos";
 import LivrosPorGenero from "./components/LivrosPorGenero/LivrosPorGenero";
 import ClientesList from "./components/ListaCliente/ClientesList";
 import Home from "./components/home/Home";
-import AdmPage from "./components/AdmPage/AdmPage.jsx"
+import AdmPage from "./components/AdmPage/AdmPage.jsx";
 
 function App() {
   return (
@@ -21,10 +21,8 @@ function App() {
         <Route path="/generos" element={<Generos />} />
         <Route path="/generos/:genero" element={<LivrosPorGenero />} />
         <Route path="/login" element={<Login />} /> {/* Rota para login */}
-        <Route path="/Clientes" element={<ClientesList/>} /> 
-        <Route path="/AdmPage" element={<AdmPage/>} /> 
-
-          
+        <Route path="/Clientes" element={<ClientesList />} />
+        <Route path="/AdmPage" element={<AdmPage />} />
         {/* <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} /> */}
       </Routes>
