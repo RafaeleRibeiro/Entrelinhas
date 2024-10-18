@@ -1,0 +1,79 @@
+/* Usando as mesmas variáveis de cor dos cards */
+:root {
+    --table-bg-color: #343a40; /* Cor do fundo da tabela (igual ao card) */
+    --table-text-color: #ffffff; /* Cor do texto */
+    --table-row-hover-bg: #495057; /* Cor ao passar o mouse sobre as linhas */
+    --table-border-color: #212529; /* Cor das bordas */
+    --btn-icon-color: #ffffff; /* Cor dos ícones dos botões */
+  }
+  
+  .fornecedores-list-container {
+    color: var(--table-text-color); /* Cor do texto */
+    background-color: var(--table-bg-color); /* Cor de fundo do container */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    color: var(--table-text-color); /* Cor do título */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo da tabela */
+  .table {
+    color: var(--table-text-color); /* Cor do texto */
+    background-color: var(--table-bg-color); /* Fundo da tabela */
+    border-color: var(--table-border-color); /* Cor da borda */
+  }
+  
+  .table thead th {
+    background-color: var(--table-bg-color); /* Fundo do cabeçalho */
+    color: var(--table-text-color); /* Cor do texto no cabeçalho */
+    border-color: var(--table-border-color); /* Cor da borda */
+  }
+  
+  .table tbody tr {
+    background-color: var(--table-bg-color); /* Fundo das linhas */
+  }
+  
+  .table tbody tr:hover {
+    background-color: var(--table-row-hover-bg); /* Fundo ao passar o mouse */
+  }
+  
+  /* Botões de ação */
+  button {
+    background-color: transparent; /* Fundo transparente para os botões */
+    border: none;
+  }
+  
+  button i {
+    color: var(--btn-icon-color); /* Cor dos ícones */
+  }
+  
+  button:hover i {
+    color: #ffc107; /* Cor de hover (amarelo) */
+  }
+  
+  /* Formulário de criação de novo fornecedor */
+  .novo-fornecedor-form input {
+    margin-right: 10px;
+    background-color: var(--table-bg-color);
+    border: 1px solid var(--table-border-color);
+    color: var(--table-text-color);
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .novo-fornecedor-form button {
+    background-color: #28a745; /* Cor do botão criar */
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .novo-fornecedor-form button:hover {
+    background-color: #218838; /* Cor de hover */
+  }
+  

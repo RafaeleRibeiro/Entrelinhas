@@ -9,20 +9,20 @@ function App() {
         <h1 className="my-4 title">Gerenciamento</h1>
         <div className="row row-cols-1 row-cols-md-2 g-4 mt-5 pt-0 pt-md-5">
           <Card title="Clientes" icon="bi-person" link="/clientes" />
-          <Card title="Estoque" icon="bi-box-seam" link="/estoque" />
+          {/* <Card title="Estoque" icon="bi-box-seam" link="/estoque" /> */}
           <Card title="Produtos" icon="bi-journal" link="/produtos" />
-          <Card title="Faturamento" icon="bi-graph-up" link="/faturamento" />
+          {/* <Card title="Faturamento" icon="bi-graph-up" link="/faturamento" /> */}
           <Card
             title="Fornecedores"
             icon="bi-person-plus"
             link="/fornecedores"
           />
-          <Card
+          {/* <Card
             title="Pagamentos"
             icon="bi-currency-dollar"
             link="/pagamentos"
-          />
-          <Card title="Vendas" icon="bi-gear" link="/vendas" />
+          /> */}
+          {/* <Card title="Vendas" icon="bi-gear" link="/vendas" /> */}
           <Card
             title="Melhores Produtos"
             icon="bi-star"

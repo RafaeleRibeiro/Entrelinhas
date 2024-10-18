@@ -10,6 +10,7 @@ import Login from "./components/login/Login";
 import Generos from "./components/Generos/Generos";
 import LivrosPorGenero from "./components/LivrosPorGenero/LivrosPorGenero";
 import ClientesList from "./components/ListaCliente/ClientesList";
+import FornecedoresList from "./components/ListaFornecedores/FornecedoresList.jsx";
 import Home from "./components/home/Home";
 import AdmPage from "./components/AdmPage/AdmPage.jsx";
 
@@ -22,9 +23,8 @@ function App() {
         <Route path="/generos/:genero" element={<LivrosPorGenero />} />
         <Route path="/login" element={<Login />} /> {/* Rota para login */}
         <Route path="/Clientes" element={<ClientesList />} />
+        <Route path="/fornecedores" element={<FornecedoresList />} />
         <Route path="/AdmPage" element={<AdmPage />} />
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} /> */}
       </Routes>
     </>
   );
