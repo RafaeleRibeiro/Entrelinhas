@@ -1,14 +1,63 @@
+/* Container principal */
 .clientes-list-container {
+  margin: 0 auto;
   padding: 20px;
+  max-width: 900px;
+  text-align: center;
+  /* color: #fff; */
+  border-radius: 8px;
 }
 
-table {
+/* Título */
+.clientes-list-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* color: #ffffff; */
+}
+
+/* Tabela */
+.table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate; /* Para permitir o espaçamento entre linhas */
+  border-spacing: 0 10px; /* Espaçamento de 10px entre as linhas da tabela */
+  margin-top: 20px;
 }
 
-th,
-td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.table th,
+.table td {
+  padding: 15px 10px; /* Aumenta o padding para melhorar o espaçamento interno */
+  text-align: center;
+  background-color: #6b7972; /* Fundo das células */
+}
+
+.table th {
+  background-color: #6b7972;
+  color: #000000;
+  font-weight: bold;
+}
+
+.table td {
+  color: #000000;
+}
+
+/* Ícones de ações */
+.table td i {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.table td i:hover {
+  color: #956439;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .clientes-list-container {
+    padding: 10px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+  }
 }

@@ -1,54 +1,64 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./ClientesList.css"; // Estilo opcional
+import "./ClientesList.css"; // Importação do CSS
 
 const ClientesList = () => {
   const [usuarios, setUsuarios] = useState([]); // Estado para armazenar a lista de usuários
   const [loading, setLoading] = useState(true); // Estado de carregamento
   const [error, setError] = useState(null); // Estado para erro
   const [editUsuario, setEditUsuario] = useState(null); // Estado para editar o usuário
-  const [novoUsuario, setNovoUsuario] = useState({ nome: "", email: "", senha: "" }); // Estado para criar um novo usuário
+  const [novoUsuario, setNovoUsuario] = useState({
+    nome: "",
+    email: "",
+    senha: "",
+  }); // Estado para novo usuário
 
+  // Buscar usuários da API ao montar o componente
   useEffect(() => {
-    // Função para buscar os usuários da API
     const fetchUsuarios = async () => {
       try {
-        const response = await axios.get("https://redev.somee.com/api/usuarios");
-        setUsuarios(response.data); // Armazena os dados no estado
-        setLoading(false); // Define que o carregamento terminou
+        const response = await axios.get(
+          "https://redev.somee.com/api/usuarios"
+        );
+        setUsuarios(response.data);
+        setLoading(false);
       } catch (err) {
-        setError(err.message); // Em caso de erro, armazena a mensagem
-        setLoading(false); // Define que o carregamento terminou
+        setError(err.message);
+        setLoading(false);
       }
     };
 
-    fetchUsuarios(); // Chama a função ao montar o componente
-  }, []); // O array vazio faz com que o useEffect rode apenas uma vez
+    fetchUsuarios(); // Chamada à API
+  }, []);
 
-  // Função para excluir um usuário
+  // Função para excluir usuário
   const handleDelete = async (usuarioId) => {
     if (window.confirm("Tem certeza que deseja excluir este usuário?")) {
       try {
         await axios.delete(`https://redev.somee.com/api/usuarios/${usuarioId}`);
-        setUsuarios(usuarios.filter((usuario) => usuario.usuarioId !== usuarioId));
+        setUsuarios(
+          usuarios.filter((usuario) => usuario.usuarioId !== usuarioId)
+        );
       } catch (error) {
         console.error("Erro ao excluir o usuário:", error);
       }
     }
   };
 
-  // Função para salvar as edições do usuário
+  // Função para salvar edição de usuário
   const handleSaveEdit = async (usuarioId) => {
     if (editUsuario.nome && editUsuario.email) {
       try {
-        const response = await axios.put(`https://redev.somee.com/api/usuarios/${usuarioId}`, editUsuario);
-        // Atualiza a lista de usuários com os novos dados
+        const response = await axios.put(
+          `https://redev.somee.com/api/usuarios/${usuarioId}`,
+          editUsuario
+        );
         setUsuarios((prevUsuarios) =>
-          prevUsuarios.map((usuario) => 
+          prevUsuarios.map((usuario) =>
             usuario.usuarioId === usuarioId ? response.data : usuario
           )
         );
-        setEditUsuario(null); // Limpa o estado de edição
+        setEditUsuario(null);
       } catch (error) {
         console.error("Erro ao salvar o usuário:", error);
       }
@@ -57,23 +67,26 @@ const ClientesList = () => {
     }
   };
 
-  // Função para editar um usuário
+  // Função para editar usuário
   const handleEdit = (usuario) => {
-    setEditUsuario({ ...usuario }); // Preenche o estado com os dados atuais do usuário
+    setEditUsuario({ ...usuario });
   };
 
-  // Função para cancelar a edição
+  // Função para cancelar edição
   const handleCancelEdit = () => {
-    setEditUsuario(null); // Limpa o estado de edição
+    setEditUsuario(null);
   };
 
-  // Função para criar um novo usuário
+  // Função para criar novo usuário
   const handleCreate = async () => {
     if (novoUsuario.nome && novoUsuario.email && novoUsuario.senha) {
       try {
-        const response = await axios.post("https://redev.somee.com/api/usuarios", novoUsuario);
-        setUsuarios([...usuarios, response.data]); // Adiciona o novo usuário à lista
-        setNovoUsuario({ nome: "", email: "", senha: "" }); // Limpa os campos após a criação
+        const response = await axios.post(
+          "https://redev.somee.com/api/usuarios",
+          novoUsuario
+        );
+        setUsuarios([...usuarios, response.data]);
+        setNovoUsuario({ nome: "", email: "", senha: "" });
       } catch (error) {
         console.error("Erro ao criar o usuário:", error);
       }
@@ -82,42 +95,44 @@ const ClientesList = () => {
     }
   };
 
-  // Exibição condicional baseada no estado
-  if (loading) {
-    return <div>Carregando usuários...</div>;
-  }
-
-  if (error) {
-    return <div>Erro ao carregar usuários: {error}</div>;
-  }
+  // Exibição condicional
+  if (loading) return <div>Carregando usuários...</div>;
+  if (error) return <div>Erro ao carregar usuários: {error}</div>;
 
   return (
     <div className="clientes-list-container">
-      <h1>Lista de Usuários</h1>
+      <h1>Clientes</h1>
 
-      {/* Formulário para criar um novo usuário */}
-      <div style={{display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+      {/* Formulário para criar novo usuário */}
+      <div className="novo-usuario-form">
         <input
           type="text"
           placeholder="Nome"
           value={novoUsuario.nome}
-          onChange={(e) => setNovoUsuario({ ...novoUsuario, nome: e.target.value })}
+          onChange={(e) =>
+            setNovoUsuario({ ...novoUsuario, nome: e.target.value })
+          }
         />
         <input
           type="email"
           placeholder="Email"
           value={novoUsuario.email}
-          onChange={(e) => setNovoUsuario({ ...novoUsuario, email: e.target.value })}
+          onChange={(e) =>
+            setNovoUsuario({ ...novoUsuario, email: e.target.value })
+          }
         />
         <input
           type="password"
           placeholder="Senha"
           value={novoUsuario.senha}
-          onChange={(e) => setNovoUsuario({ ...novoUsuario, senha: e.target.value })}
+          onChange={(e) =>
+            setNovoUsuario({ ...novoUsuario, senha: e.target.value })
+          }
         />
         <button onClick={handleCreate}>Criar Novo Usuário</button>
       </div>
 
+      {/* Tabela de usuários */}
       {usuarios.length === 0 ? (
         <p>Nenhum usuário encontrado.</p>
       ) : (
@@ -127,54 +142,67 @@ const ClientesList = () => {
               <th>ID</th>
               <th>Nome</th>
               <th>Email</th>
-              <th>Ações</th> {/* Nova coluna para ações */}
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
-  {usuarios.map((usuario) => (
-    <tr key={usuario.usuarioId}> {/* Aqui está a chave */}
-      <td>{usuario.usuarioId}</td>
-      <td>
-        {editUsuario && editUsuario.usuarioId === usuario.usuarioId ? (
-          <input
-            type="text"
-            value={editUsuario.nome}
-            onChange={(e) => setEditUsuario({ ...editUsuario, nome: e.target.value })}
-          />
-        ) : (
-          usuario.nome
-        )}
-      </td>
-      <td>
-        {editUsuario && editUsuario.usuarioId === usuario.usuarioId ? (
-          <input
-            type="email"
-            value={editUsuario.email}
-            onChange={(e) => setEditUsuario({ ...editUsuario, email: e.target.value })}
-          />
-        ) : (
-          usuario.email
-        )}
-      </td>
-      <td>
-        {editUsuario && editUsuario.usuarioId === usuario.usuarioId ? (
-          <>
-            <button onClick={() => handleSaveEdit(usuario.usuarioId)}>Salvar</button>
-            <button onClick={handleCancelEdit}>Cancelar</button>
-          </>
-        ) : (
-          <>
-         
-            <button onClick={() => handleEdit(usuario)}><i class="bi bi-pencil-square"></i></button>
-            <button onClick={() => handleDelete(usuario.usuarioId)}><i class="bi bi-trash3"></i></button>
-            
-          </>
-        )}
-      </td>
-    </tr>
-  ))}
-</tbody>
-
+            {usuarios.map((usuario) => (
+              <tr key={usuario.usuarioId}>
+                <td>{usuario.usuarioId}</td>
+                <td>
+                  {editUsuario &&
+                  editUsuario.usuarioId === usuario.usuarioId ? (
+                    <input
+                      type="text"
+                      value={editUsuario.nome}
+                      onChange={(e) =>
+                        setEditUsuario({ ...editUsuario, nome: e.target.value })
+                      }
+                    />
+                  ) : (
+                    usuario.nome
+                  )}
+                </td>
+                <td>
+                  {editUsuario &&
+                  editUsuario.usuarioId === usuario.usuarioId ? (
+                    <input
+                      type="email"
+                      value={editUsuario.email}
+                      onChange={(e) =>
+                        setEditUsuario({
+                          ...editUsuario,
+                          email: e.target.value,
+                        })
+                      }
+                    />
+                  ) : (
+                    usuario.email
+                  )}
+                </td>
+                <td>
+                  {editUsuario &&
+                  editUsuario.usuarioId === usuario.usuarioId ? (
+                    <>
+                      <button onClick={() => handleSaveEdit(usuario.usuarioId)}>
+                        Salvar
+                      </button>
+                      <button onClick={handleCancelEdit}>Cancelar</button>
+                    </>
+                  ) : (
+                    <>
+                      <button onClick={() => handleEdit(usuario)}>
+                        <i className="bi bi-pencil-square"></i>
+                      </button>
+                      <button onClick={() => handleDelete(usuario.usuarioId)}>
+                        <i className="bi bi-trash3"></i>
+                      </button>
+                    </>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       )}
     </div>
