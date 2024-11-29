@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.css";
 
 const Header = () => {
@@ -9,10 +8,10 @@ const Header = () => {
       </div>
 
       <div className=" col-md-1 d-flex">
-        <a className="btn p-1 btn-lg color-redev" href="#">
+        <a className="btn p-1 bg-transparent btn-lg color-redev" href="#">
           <i className="bi bi-cart-plus fs-3"></i>
         </a>
-        <a className="btn p-1 btn-lg color-redev" href="/login">
+        <a className="btn p-1 bg-transparent btn-lg color-redev" href="/login">
           <i className="bi bi-person fs-3"></i>
         </a>
       </div>

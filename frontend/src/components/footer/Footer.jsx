@@ -20,19 +20,19 @@ export const Footer = () => {
         <h5 className="pe-3">Agradecemos sua companhia!</h5>
 
         <div>
-          <a className="btn btn-lg p-2" href="Facebook">
+          <a className="btn btn-lg bg-transparent p-2" href="Facebook">
             <i className="bi bi-facebook"></i>
           </a>
 
-          <a className="btn btn-lg p-2" href="Twitter">
+          <a className="btn btn-lg bg-transparent p-2" href="Twitter">
             <i className="bi bi-twitter-x"></i>
           </a>
 
-          <a className="btn btn-lg p-2" href="Youtube">
+          <a className="btn btn-lg bg-transparent p-2" href="Youtube">
             <i className="bi bi-youtube"></i>
           </a>
 
-          <a className="btn btn-lg p-2" href="Instagram">
+          <a className="btn btn-lg bg-transparent p-2" href="Instagram">
             <i className="bi bi-instagram"></i>
           </a>
         </div>

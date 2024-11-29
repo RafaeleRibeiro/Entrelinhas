@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import "../comentario/Comentario.css";
 import axios from "axios";
 
+// eslint-disable-next-line react/prop-types
 const Comentario = ({ googleBooksId }) => {
   const [comentario, setComentario] = useState("");
   const [nota, setNota] = useState(0);
