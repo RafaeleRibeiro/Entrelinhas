@@ -6,8 +6,7 @@
 
 <p align="center">
   <a href="https://trello.com/invite/b/66acd187c9556e20b6437bc6/ATTI8510db676bd9e2c95ecd52aa548223fa2BC8771F/entrelinhas-redev">Trello</a> -
-  <a href="https://www.figma.com/design/vYNfG1YU0zkxnjioQSRZ9d/Entrelinhas?node-id=138-3&t=YHWV6X1pYCr0Tr8A-1">Figma</a> -
-  <a href="http://redev.somee.com/swagger/index.html">Swagger API</a> 
+  <a href="https://www.figma.com/design/vYNfG1YU0zkxnjioQSRZ9d/Entrelinhas?node-id=138-3&t=YHWV6X1pYCr0Tr8A-1">Figma</a>
 </p>
 
 ## Sebo Online Entrelinhas
@@ -30,15 +29,12 @@ A leitura de obras nacionais é de fundamental importância para a construção 
 
 <img src="https://github.com/user-attachments/assets/8f6f3708-bfd5-4828-90cf-8a746982ecdf">
 
-O Entrelinhas é uma plataforma online voltada para a venda de livros, com a proposta de democratizar o acesso à leitura. A ideia central é tornar os livros mais acessíveis, tanto financeiramente quanto em termos de conveniência, ao disponibilizá-los em um ambiente virtual. Isso é especialmente relevante no contexto atual, onde o consumo de produtos e serviços pela internet se tornou uma prática comum. 
+O Entrelinhas é uma plataforma online voltada para a venda de livros, com a proposta de democratizar o acesso à leitura. A ideia central é tornar os livros mais acessíveis, tanto financeiramente quanto em termos de conveniência, ao disponibilizá-los em um ambiente virtual. Isso é especialmente relevante no contexto atual, onde o consumo de produtos e serviços pela internet se tornou uma prática comum.
 
-## Documentação 
+## Documentação
 
 Para mais detalhes sobre a construção do projeto, consulte a [documentação completa](https://sesisenaispedu-my.sharepoint.com/:w:/r/personal/eduarda_gomes_portalsesisp_org_br/Documents/Resumo%20e%20Descri%C3%A7%C3%A3o%20-%20REDev.docx?d=w15565e0fcfec4f6a9a4c7dbf90a347dc&csf=1&web=1&e=s35Iee).
 
 ## Créditos
 
 Imagens e documentação por Eduarda e Rafaele. 👧🏻👧🏻
-
-
-

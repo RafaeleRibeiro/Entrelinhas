@@ -1,0 +1,26 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #fff;
+  --barrinha-color: #d9d9d9;
+  --text-color: #000;
+  --vermelhinho-color: #851111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-color: #272626;
+    --barrinha-color: #515050;
+    --text-color: #fff;
+    --vermelhinho-color: #fff;
+  }
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,13 @@
+.banner {
+  width: 100%;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

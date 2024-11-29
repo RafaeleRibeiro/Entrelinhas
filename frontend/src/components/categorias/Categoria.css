@@ -1,0 +1,8 @@
+#bookzinho{
+    padding: 0.4em 0.7em;
+}
+
+#bookzinho:hover {
+  background: rgba(57, 81, 68, 0.5);
+  border-radius: 50%;
+}

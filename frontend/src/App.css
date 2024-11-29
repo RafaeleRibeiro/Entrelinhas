@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
+:root {
+  --logo-font-color: #395144;
+  --bg-color: #fff;
+  --font-color: #000;
+  --icon-color: #fff;
+  --icon-color-redev: #4d2b0d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-font-color: #fff;
+    --bg-color: #272626;
+    --font-color: #fff;
+    --icon-color: #000;
+    --icon-color-redev: #4d2b0d;
+  }
+}
+
+#root {
+  overflow-x: hidden;
+  color: var(--font-color);
+}
+
+body {
+  background: var(--bg-color);
+}
+
+
+.btn {
+  color: var(--icon-color-white);
+}

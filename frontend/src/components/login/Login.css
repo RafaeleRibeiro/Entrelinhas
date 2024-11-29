@@ -1,0 +1,54 @@
+.auth-page {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .auth-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #758378; /* Cor de fundo para se aproximar da imagem */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .auth-box {
+    flex: 1;
+    margin: 10px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #bfb399;
+  }
+  
+  .auth-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #000;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    color: #000;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #4b6054;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #3d4d43;
+  }
+  
+  .alert {
+    margin-top: 20px;
+  }
